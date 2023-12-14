@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Traffic Activity Analyzer</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="./add-ataa-record.component.css" rel="stylesheet">
+</head>
+
+<!-- MAIN BODY -->
+<body>
+<!-- MAIN FORM DIV -->
+<form (ngSubmit)="addRecord()">
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="flex-container">
+      <div class="section">
+        <label for="operation">OPERATION</label>
+        <select name="operation" id="operation" class="form-control form-control-lg mb-3" [(ngModel)]="AtaaRecord.operation" required >
+          <option value="null">Select</option>
+          <option value="overflight">OVERFLIGHT</option>
+          <option value="touch and go">TOUCH AND GO</option>
+          <option value="full stop">FULL STOP</option>
+          <option value="low approach">LOW APPROACH</option>
+          <option value="takeoff">TAKEOFF</option>
+          <option value="transit">TRANSIT</option>
+        </select>
+      </div>
+      <div class="section">
+        <label for="owner" class="text-success">OWNER</label>
+        <select name="owner" id="owner" class=" form-control form-control-lg mb-3" [(ngModel)]="AtaaRecord.aircraft_owner" required>
+          <option value="null">Select</option>
+          <option value="military">MILITARY</option>
+          <option value="civilian">CIVILIAN</option>
+        </select>
+      </div>
+      <div class="section">
+        <label for="aircraft"> AIRCRAFT TYPE </label>
+        <select name="aircraft" id="aircraft" class="form-control form-control-lg mb-3" [(ngModel)]="AtaaRecord.aircraft" required>
+          <option value="null">Select</option>
+          <option value="f16">F16</option>
+          <option value="f18">F18</option>
+          <option value="f35">F35</option>
+          <option value="p8">P8</option>
+          <option value="helo">HELO</option>
+        </select>
+      </div>
+      <div class="section">
+        <label for="count">COUNT</label>
+        <input class="count" name="count" id="count" type="number" min="1" max="200" [(ngModel)]="AtaaRecord.count" required>
+      </div>
+
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="flex-container">
+      <div class="section">
+        <label for="runway">RUNWAY</label>
+        <select name="runway" id="runway" class="form-control form-control-lg mb-3" [(ngModel)]="AtaaRecord.runway" required>
+          <option value="null">Select</option>
+          <option value="13R">13R</option>
+          <option value="13L">13L</option>
+          <option value="31R">31R</option>
+          <option value="31L">31L</option>
+          <option value="25">25</option>
+          <option value="HELO1">HELO1</option>
+          <option value="HELO2">HELO2</option>
+          <option value="emergency">EMERGENCY</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="approach">APPROACH</label>
+        <select name="approach" id="approach" class="form-control form-control-lg mb-3" [(ngModel)]="AtaaRecord.approach">
+          <option value="null">Select</option>
+          <option value="ASR">ASR</option>
+          <option value="GPS">GPS</option>
+          <option value="RNAV">RNAV</option>
+          <option value="ILS">ILS</option>
+          <option value="PSR">PSR</option>
+          <option value="TACAN">TACAN</option>
+        </select>
+      </div>
+      <div class="section">
+        <label for="departure">DEPARTURE</label>
+        <select name="departure" id="departure" class="form-control form-control-lg mb-3" [(ngModel)]="AtaaRecord.departure">
+          <option value="null">Select</option>
+          <option value="TOWER">TOWER</option>
+          <option value="VFR">VFR</option>
+        </select>
+
+        <div class="section">
+          <button class="submit" type="submit">SUBMIT</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="flex-container">
+
+      <div class="section">
+        <label for="date">DATE</label>
+        <input class="dates" name="date" id="date" type="date" [(ngModel)]="AtaaRecord.doe" required>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</form>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h2>Add ATAA Record</h2>-->
+<!--<form (ngSubmit)="addRecord()">-->
+<!--  <div>-->
+<!--    <label for="recordID">Record ID</label>-->
+<!--    <input id="recordID" name="aircraftOwner" [(ngModel)]="AtaaRecord.recordID" required />-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <label for="aircraftOwner">Aircraft Owner</label>-->
+<!--    <input id="aircraftOwner" name="aircraftOwner" [(ngModel)]="AtaaRecord.aircraftOwner" required />-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <label for="operation">Operation</label>-->
+<!--    <input id="operation" name="aircraftOwner" [(ngModel)]="AtaaRecord.operation" required />-->
+<!--  </div>-->
+
+
+<!--  <button type="submit">Submit</button>-->
+<!--</form>-->

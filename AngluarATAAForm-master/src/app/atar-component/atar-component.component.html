@@ -1,0 +1,16 @@
+<form [formGroup]="dateForm" (ngSubmit)="onSubmit()">
+  <label for="startDate">Start Date:</label>
+  <input type="date" id="startDate" formControlName="startDate" required>
+
+  <label for="endDate">End Date:</label>
+  <input type="date" id="endDate" formControlName="endDate" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+
+<div *ngFor="let item of approachsum">
+  <!-- Display your data here -->
+  {{ item.runway }}
+</div>

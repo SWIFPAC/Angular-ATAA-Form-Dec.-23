@@ -1,0 +1,40 @@
+<!--<h2>User List</h2>-->
+<!--<ul>-->
+<!--  <li *ngFor="let ataarecords of ataaRecords">-->
+<!--    {{ ataarecords.operation }} {{ ataarecords.owner }}-->
+<!--  </li>-->
+<!--</ul>-->
+
+
+
+<h2>ATAA Records</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Owner</th>
+    <th>Operation</th>
+    <th>Aircraft Type</th>
+    <th>Runway</th>
+    <th>Approach</th>
+    <th>Departure</th>
+    <th>Count</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let ataarecord of ataaRecords">
+    <td>{{ ataarecord.aircraft_owner }}</td>
+    <td>{{ ataarecord.operation }}</td>
+    <td>{{ ataarecord.aircraft }}</td>
+    <td>{{ ataarecord.runway }}</td>
+    <td>{{ ataarecord.approach }}</td>
+    <td>{{ ataarecord.departure }}</td>
+    <td>{{ ataarecord.count }}</td>
+    <td>{{ ataarecord.doe }}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+

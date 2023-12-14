@@ -1,0 +1,39 @@
+/* Styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f5f5f5;
+}
+
+/* Table header styles */
+thead {
+  background-color: #007BFF;
+  color: black;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table body styles */
+tbody {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #e5e5e5;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 10px;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+  background-color: #cceeff;
+}
